@@ -1,11 +1,11 @@
 from playwright.sync_api import sync_playwright
 import requests
+import os
 
-EMAIL = "sasanksaivulchi127@gmail.com"
-PASSWORD = "Sasank*127"
-
-TELEGRAM_TOKEN = "8692457385:AAFqb8K9E0fEF0h1UJ0K912gnr-4P4VwdRI"
-CHAT_ID = "7173260789"
+EMAIL = os.getenv("EMAIL")
+PASSWORD = os.getenv("PASSWORD")
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
 
 
 def send_alert(message):
