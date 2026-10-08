@@ -2,7 +2,7 @@ name: Tap Academy Job Monitor
 
 on:
   schedule:
-    - cron: "*/30 * * * *"   # runs every 30 minutes
+    - cron: "17,47 * * * *"   # runs every 30 minutes
   workflow_dispatch:
 
 jobs:
