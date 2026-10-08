@@ -34,7 +34,7 @@ def check_jobs():
         page.locator("input[type='email']").fill(EMAIL)
         page.locator("input[type='password']").fill(PASSWORD)
 
-        page.locator("button:has-text('Continue')").click()
+        page.locator("button:has-text('Login securely')").click()
 
         page.wait_for_timeout(3000)
 
@@ -57,7 +57,7 @@ def check_jobs():
             job = jobs.nth(i)
             text = job.inner_text()
 
-            if "Open" in text and "Closed" not in text:
+            if "Open" in text and "CLOSED" not in text:
 
                 lines = text.split("\n")
 
@@ -67,7 +67,7 @@ def check_jobs():
                 job_id = lines[0]
 
                 ends = next((l for l in lines if "Ends in" in l), "")
-                role = next((l for l in lines if "Engineer" in l or "Developer" in l or "Analyst" in l), "")
+                role = next((l for l in lines if "Engineer" in l or "Intern" in l or "Developer" in l or "Analyst" in l or "Java" in l or "Frontend" in ), "")
                 location = next((l for l in lines if "Bengaluru" in l or "Hyderabad" in l or "Chennai" in l), "")
                 salary = next((l for l in lines if "LPA" in l), "")
                 qualification = next((l for l in lines if "B.Tech" in l or "M.Tech" in l or "BCA" in l or "MCA" in l), "")
