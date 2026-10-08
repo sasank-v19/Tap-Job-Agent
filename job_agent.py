@@ -67,7 +67,7 @@ def check_jobs():
                 job_id = lines[0]
 
                 ends = next((l for l in lines if "Ends in" in l), "")
-                role = next((l for l in lines if "Engineer" in l or "Intern" in l or "Developer" in l or "Analyst" in l or "Java" in l or "Frontend" in ), "")
+                role = next((l for l in lines if "Engineer" in l or "Intern" in l or "Developer" in l or "Analyst" in l or "Java" in l or "Frontend" in l ), "")
                 location = next((l for l in lines if "Bengaluru" in l or "Hyderabad" in l or "Chennai" in l), "")
                 salary = next((l for l in lines if "LPA" in l), "")
                 qualification = next((l for l in lines if "B.Tech" in l or "M.Tech" in l or "BCA" in l or "MCA" in l), "")
